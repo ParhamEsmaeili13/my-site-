@@ -1,13 +1,92 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
+<html class="loading" lang="en-US">
+  <head>
+      {% load static %}
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+      <title> Parham Esmaeili </title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <meta name="description" content="PRO Card - Material Resume / CV / vCard Template" />
+    <meta name="keywords" content="vcard, resposnive, retina, resume, jquery, css3, bootstrap, Material CV, portfolio" />
+    <meta name="author" content="lmtheme" />
+    <link rel="shortcut icon" href={% static "favicon.ico"%}>
 
-{% block content %}
-{% endblock %}
+    <link rel="stylesheet" type="text/css" href={% static "css/bootstrap.min.css"%} >
+    <link rel="stylesheet" type="text/css" href={% static "css/normalize.css"%} >
+    <link rel="stylesheet" type="text/css" href={% static "css/animate.css"%} >
+    <link rel="stylesheet" type="text/css" href={% static "css/transition-animations.css"%} >
+    <link rel="stylesheet" type="text/css" href={% static "css/owl.carousel.css"%} >
+    <link rel="stylesheet" type="text/css" href={% static "css/magnific-popup.css"%} >
+    <link rel="stylesheet" type="text/css" href={% static "css/main.css"%} >
+
+    <script src={% static "js/jquery-2.1.3.min.js"%}></script>
+    <script src={% static "js/modernizr.custom.js"%}></script>
+
+    <script src='https://www.google.com/recaptcha/api.js'></script>
+  </head>
+
+<body class="material-template">
+    <!-- Loading animation -->
+    <div class="preloader">
+      <div class="preloader-animation">
+        <div class="preloader-spinner">
+        </div>
+      </div>
+    </div>
+
+    {% include 'include/navbar.html' %}
+
+    {% block content %}{% endblock %}
+
+    <div class="page" id="page">
+
+      <!-- Mobile Header -->
+      <div class="mobile-header mobile-visible">
+        <div class="mobile-logo-container">
+          <div class="mobile-site-title">Alex Smith</div>
+        </div>
+
+        <a class="menu-toggle mobile-visible">
+          <i class="fa fa-bars"></i>
+        </a>
+      </div>
+      <!-- /Mobile Header -->
+    </div>
+
+
+{#      <!-- Main Content -->#}
+{#      <div id="main" class="site-main">#}
+{#        <!-- Page changer wrapper -->#}
+{#        <div class="pt-wrapper">#}
+{#          <!-- Subpages -->#}
+{#          <div class="subpages">#}
+{##}
+{##}
+{##}
+{#          </div>#}
+{#        </div>#}
+{#        <!-- /Page changer wrapper -->#}
+{#      </div>#}
+{#      <!-- /Main Content -->#}
+
+    <footer>
+      <div class="copyrights">© 2017 All rights reserved. Material template <a href="https://www.mellatweb.com/"> Mellatweb.com</a></div>
+    </footer>
+
+
+    <script type="text/javascript" src={% static "js/bootstrap.min.js"%}></script>
+    <script type="text/javascript" src={% static "js/pages-switcher.js"%}></script>
+    <script type="text/javascript" src={% static "js/imagesloaded.pkgd.min.js"%}></script>
+    <script type="text/javascript" src={% static "js/validator.js"%}></script>
+    <script type="text/javascript" src={% static "js/jquery.shuffle.min.js"%}></script>
+    <script type="text/javascript" src={% static "js/masonry.pkgd.min.js"%}></script>
+    <script type="text/javascript" src={% static "js/owl.carousel.min.js"%}></script>
+    <script type="text/javascript" src={% static "js/jquery.magnific-popup.min.js"%}></script>
+    <script type="text/javascript" src={% static "js/jquery.hoverdir.js"%}></script>
+    <!--<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=YOUR-API-KEY"></script>-->
+    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js"></script>
+    <script type="text/javascript" src={% static "js/jquery.googlemap.js"%}></script>
+    <script type="text/javascript" src={% static "js/main.js"%}></script>
 
 </body>
 </html>
