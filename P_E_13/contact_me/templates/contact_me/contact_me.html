@@ -15,7 +15,7 @@
                         <h3>Get in <span>Touch</span></h3>
                       </div>
                       <!-- Google Map -->
-                      <div id="map" class="map"></div>
+{#                      <div id="map" class="map"></div>#}
                       <!-- End of Google Map -->
 
                       <div class="contact-info-block">
@@ -23,7 +23,7 @@
                           <i class="fa fa-map-marker"></i>
                         </div>
                         <div class="ci-text">
-                          <h5>Los Angeles, USA</h5>
+                          <h5>Tehran, IRN</h5>
                         </div>
                       </div>
                       <div class="contact-info-block">
@@ -31,7 +31,7 @@
                           <i class="fa fa-envelope"></i>
                         </div>
                         <div class="ci-text">
-                          <h5>alexsmith@example.com</h5>
+                          <h5>parham.esmaeili@gmail.com</h5>
                         </div>
                       </div>
                       <div class="contact-info-block">
@@ -39,7 +39,7 @@
                           <i class="fa fa-phone"></i>
                         </div>
                         <div class="ci-text">
-                          <h5>+123 654 78900</h5>
+                          <h5>+989102179459</h5>
                         </div>
                       </div>
                       <div class="contact-info-block">
@@ -56,8 +56,8 @@
                       <div class="block-title">
                         <h3>Contact <span>Form</span></h3>
                       </div>
-
-                      <form method="post" id="contact-form" action="{% static "contact_form/contact_form.php"%}" >
+{#{% static "contact_form/contact_form.php"%} id="contact-form"#}
+                      <form method="post" action="">
                         {% csrf_token %}
                         <div class="messages"></div>
 
@@ -86,7 +86,7 @@
                             <div class="help-block with-errors"></div>
                           </div>
 
-                          <div class="g-recaptcha" data-sitekey="6LdqmCAUAAAAAMMNEZvn6g4W5e0or2sZmAVpxVqI"></div>
+{#                          <div class="g-recaptcha" data-sitekey="6LdqmCAUAAAAAMMNEZvn6g4W5e0or2sZmAVpxVqI"></div>#}
 
                           <input type="submit" class="button btn-send" value="Send message" href="{% url 'contact_me:contact_me' %}">
                         </div>

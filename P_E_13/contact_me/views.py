@@ -12,7 +12,7 @@ class ContactMeView(View):
         form = UserContactForm(request.POST)
         if form.is_valid():
             form.save()
-            messages.success(request, 'your message was sent successfully!', extra_tags='success')
+            messages.success(request, 'your message was sent successfully! will reply you soon', extra_tags='success')
         else:
             messages.error(request, 'not a valid message', extra_tags='danger')
         return redirect('contact_me:contact_me')
