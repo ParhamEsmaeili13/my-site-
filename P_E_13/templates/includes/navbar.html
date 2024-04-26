@@ -1,0 +1,46 @@
+<!-- Loading animation -->
+<div class="preloader">
+  <div class="preloader-animation">
+    <div class="preloader-spinner">
+    </div>
+  </div>
+</div>
+
+  <!-- Header -->
+  <header id="site_header" class="header mobile-menu-hide">
+    <div class="header-content">
+      <div class="site-title-block mobile-hidden">
+        <div class="site-title">Parham <span>Esmaeili</span></div>
+      </div>
+
+      <!-- Navigation -->
+      <div class="site-nav">
+        <!-- Main menu -->
+        <ul id="nav" class="site-main-menu">
+          <li>
+            <a class="pt-trigger" href="{% url 'home:home' %}">Home</a> <!-- href value = data-id without # of .pt-page. -->
+          </li>
+          <li>
+            <a class="pt-trigger" href="{% url 'about_me:about_me' %}">Resume</a>
+          </li>
+          <li>
+            <a class="pt-trigger" href="{% url 'home:home' %}">Services</a>
+          </li>
+          <li>
+            <a class="pt-trigger" href="{% url 'portfolio:portfolio' %}">Portfolio</a>
+          </li>
+          <li>
+            <a class="pt-trigger" href="{% url 'article:article' %}">Blog</a>
+          </li>
+          <li>
+            <a class="pt-trigger" href="{% url 'contact_me:contact_me' %}">Contact</a>
+          </li>
+        </ul>
+        <!-- /Main menu -->
+      </div>
+      <!-- Navigation -->
+    </div>
+  </header>
+  <!-- /Header -->
+
+</div>

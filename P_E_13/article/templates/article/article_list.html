@@ -1,0 +1,54 @@
+{% extends 'base.html' %}
+
+{% block title %}Article List{% endblock title %}
+
+
+{% block content %}
+
+  <div id="main" class="site-main">
+    <!-- Page changer wrapper -->
+    <div class="pt-wrapper">
+      <!-- Subpages -->
+      <div class="subpages">
+        <!-- Blog Subpage -->
+        <section class="pt-page-current" data-id="blog">
+          <div class="section-inner custom-page-content">
+            <div class="page-header color-1">
+              <h2>Blog</h2>
+            </div>
+            <div class="page-content">
+
+              <!-- Blog Posts Grid -->
+              <div class="blog-masonry two-columns">
+                <!-- Blog Post 1 -->
+                {% for article in articles %}
+                  <div class="item">
+                    <div class="blog-card">
+                      <div class="media-block">
+                        <a href="blog-post-1.html">
+                          <img class="post-image img-responsive" src="{{ article.image.url }}" alt="blog-post-1" />
+                          <div class="mask"></div>
+                          <div class="post-date"><span class="day">6</span><span class="month">Dec</span><!--<span class="year">2016</span>--></div>
+                        </a>
+                      </div>
+                      <div class="post-info">
+                        <ul class="category">
+                          <li><a href="#">Travel</a></li>
+                        </ul>
+                        <a href="blog-post-1.html"><h4 class="blog-item-title">{{ article.title }}</h4></a>
+                      </div>
+                    </div>
+                  </div>
+                {% endfor %}
+                <!-- End of Blog Post 1 -->
+              </div>
+              <!-- Blog Posts Grid -->
+            </div>
+          </div>
+        </section>
+        <!-- /Blog Subpage -->
+      </div>
+    </div>
+  </div>
+
+{% endblock content %}

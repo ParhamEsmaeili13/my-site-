@@ -3,10 +3,10 @@ from django.views import View
 from article.models import Article
 
 
-class ArticleView(View):
+class ArticleListView(View):
     def get(self, request):
         articles = Article.objects.all()
-        return render(request, 'article/article.html', {'articles': articles})
+        return render(request, 'article/article_list.html', {'articles': articles})
 
 
 class ArticleDetailView(View):
