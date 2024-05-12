@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/5.0/ref/settings/
 """
 
 from pathlib import Path
+import os
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -42,7 +43,8 @@ INSTALLED_APPS = [
     'article.apps.ArticleConfig',
     'about_me.apps.AboutMeConfig',
     'contact_me.apps.ContactMeConfig',
-
+    'ckeditor',
+    'ckeditor_uploader'
 ]
 
 MIDDLEWARE = [
@@ -122,13 +124,21 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/5.0/howto/static-files/
 
 STATIC_URL = 'static/'
+MEDIA_URL = 'media/'
+STATICFILES_DIRS = [BASE_DIR / 'assets']
+STATIC_ROOT = 'static/'
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
-STATICFILES_DIRS = [
-    BASE_DIR / 'home/templates/home/static'
- ]
-STATIC_ROOT = BASE_DIR / "staticfiles"
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+# CkEditor config
+CKEDITOR_CONFIGS = {
+    'default': {
+        'toolbar': 'Advanced'
+    },
+}
+CKEDITOR_UPLOAD_PATH = 'uploads/'

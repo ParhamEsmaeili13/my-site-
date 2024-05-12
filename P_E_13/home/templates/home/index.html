@@ -1,5 +1,8 @@
 {% extends 'base.html' %}
+
 {% load static %}
+
+{% block title %} Home {% endblock title %}
 
 {% block content %}
     <!-- Main Content -->
@@ -16,7 +19,7 @@
                 <div class="row">
                   <div class="col-sm-4 col-md-4 col-lg-4">
                     <div class="photo">
-                      <img alt="" src="{% static 'images/photo.png' %}">
+                      <img alt="" src="{% static 'images/ParhamEsmaeili.jpg' %}">
                     </div>
                   </div>
 
@@ -34,11 +37,11 @@
                       </div>
                     </div>
 
-                    <div class="social-links">
-                      <a href="#"><i class="fa fa-twitter"></i></a>
-                      <a href="#"><i class="fa fa-facebook"></i></a>
-                      <a href="#"><i class="fa fa-instagram"></i></a>
-                    </div>
+{#                    <div class="social-links">#}
+{#                      <a href="#"><i class="fa fa-twitter"></i></a>#}
+{#                      <a href="#"><i class="fa fa-facebook"></i></a>#}
+{#                      <a href="#"><i class="fa fa-instagram"></i></a>#}
+{#                    </div>#}
                   </div>
                 </div>
               </div>
@@ -64,7 +67,7 @@
                       <li><span class="title">Residence</span><span class="value">IRN</span></li>
                       <li><span class="title">Address</span><span class="value">Tehran, Iran</span></li>
                       <li><span class="title">e-mail</span><span class="value"><a href="mailto:parham.esmaeili@gmail.com">parham.esmaeili@gmail.com</a></span></li>
-                      <li><span class="title">Phone</span><span class="value">09102179459</span></li>
+                      <li><span class="title">Phone</span><span class="value">+989102179459</span></li>
                       <li><span class="title">Freelance</span><span class="value available">Available</span></li>
                     </ul>
                   </div>
@@ -81,8 +84,8 @@
     </div>
     <!-- /Main Content -->
 
-    <footer>
-      <div class="copyrights">© 2017 All rights reserved. Material template <a href="https://www.mellatweb.com/"> Mellatweb.com</a></div>
-    </footer>
+{#    <footer>#}
+{#      <div class="copyrights">© 2017 All rights reserved. Material template <a href="https://www.mellatweb.com/"> Mellatweb.com</a></div>#}
+{#    </footer>#}
 
 {% endblock %}

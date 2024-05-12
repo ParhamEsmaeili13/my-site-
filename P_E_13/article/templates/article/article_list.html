@@ -14,7 +14,7 @@
         <section class="pt-page-current" data-id="blog">
           <div class="section-inner custom-page-content">
             <div class="page-header color-1">
-              <h2>Blog</h2>
+              <h2>Article</h2>
             </div>
             <div class="page-content">
 
@@ -25,17 +25,17 @@
                   <div class="item">
                     <div class="blog-card">
                       <div class="media-block">
-                        <a href="blog-post-1.html">
-                          <img class="post-image img-responsive" src="{{ article.image.url }}" alt="blog-post-1" />
+                        <a href="{{ article.get_absolute_url }}">
+                          <img class="post-image img-responsive" src="{{ article.image.url }}" alt="" />
                           <div class="mask"></div>
-                          <div class="post-date"><span class="day">6</span><span class="month">Dec</span><!--<span class="year">2016</span>--></div>
+                          <div class="post-date"><span class="day">{{ article.creat_at|date:"d" }}</span><span class="month">{{ article.creat_at|date:"N" }}</span><span class="year">{{ article.creat_at|date:"Y" }}</span></div>
                         </a>
                       </div>
                       <div class="post-info">
                         <ul class="category">
-                          <li><a href="#">Travel</a></li>
+                          <li><a href="#">{{ article.category }}</a></li>
                         </ul>
-                        <a href="blog-post-1.html"><h4 class="blog-item-title">{{ article.title }}</h4></a>
+                        <a href="{{ article.get_absolute_url }}"><h4 class="blog-item-title">{{ article.title }}</h4></a>
                       </div>
                     </div>
                   </div>

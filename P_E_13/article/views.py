@@ -10,8 +10,8 @@ class ArticleListView(View):
 
 
 class ArticleDetailView(View):
-    def get(self, request, article_id):
-        article = get_object_or_404(Article, pk=article_id)
+    def get(self, request, *args, **kwargs):
+        article = get_object_or_404(Article, pk=kwargs['article_id'], slug=kwargs['article_slug'])
         return render(request, 'article/detail_article.html', {'article': article})
 
 
