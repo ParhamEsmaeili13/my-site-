@@ -41,7 +41,6 @@ INSTALLED_APPS = [
     'home.apps.HomeConfig',
     'portfolio.apps.PortfolioConfig',
     'article.apps.ArticleConfig',
-    'about_me.apps.AboutMeConfig',
     'contact_me.apps.ContactMeConfig',
     'ckeditor',
     'ckeditor_uploader'

@@ -1,65 +1,26 @@
 <!DOCTYPE html>
 <html class="loading" lang="en-US">
 
-  <head>
-    {% include 'includes/head.html' %}
-    <title>{% block title %}{% endblock title %}</title>
-  </head>
+    <head>
+        {% include 'includes/head.html' %}
+        <title>{% block title %}{% endblock title %}</title>
+    </head>
 
-  <body class="material-template">
-      <!-- Loading animation -->
-      <div class="preloader">
-        <div class="preloader-animation">
-          <div class="preloader-spinner">
-          </div>
+    <body class="material-template">
+        <!-- Loading animation -->
+        <div class="preloader">
+            <div class="preloader-animation">
+                <div class="preloader-spinner">
+                </div>
+            </div>
         </div>
-      </div>
 
-      {% include 'includes/navbar.html' %}
-      {% include 'includes/messages.html' %}
+        {% include 'includes/navbar.html' %}
+        {% include 'includes/messages.html' %}
 
-      <div class="page" id="page">
-        <!-- Mobile Header -->
-        <div class="mobile-header mobile-visible">
-          <div class="mobile-logo-container">
-            <div class="mobile-site-title">Parham Esmaeili</div>
-          </div>
+        {% block content %} {% endblock %}
 
-          <a class="menu-toggle mobile-visible">
-            <i class="fa fa-bars"></i>
-          </a>
-        </div>
-        <!-- /Mobile Header -->
-      </div>
-
-      {% block content %} {% endblock %}
-
-    <!-- Mobile Header -->
-  <div class="mobile-header mobile-visible">
-    <div class="mobile-logo-container">
-      <div class="mobile-site-title">Alex Smith</div>
-    </div>
-
-    <a class="menu-toggle mobile-visible">
-      <i class="fa fa-bars"></i>
-    </a>
-  </div>
-  <!-- /Mobile Header -->
-  
-    <!-- Main Content -->
-    <div id="main" class="site-main">
-      <!-- Page changer wrapper -->
-      <div class="pt-wrapper">
-        <!-- Subpages -->
-        <div class="subpages">
-        </div>
-        <!-- /Page changer wrapper -->
-      </div>
-    </div>
-    <!-- /Main Content -->
-
-    {% include 'includes/footer.html' %}
-
-  </body>
+        {% include 'includes/footer.html' %}
+    </body>
 
 </html>

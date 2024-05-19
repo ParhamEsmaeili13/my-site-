@@ -3,68 +3,53 @@
 {% block title %} Portfolio list {% endblock title %}
 
 {% block content %}
-        <!-- Main Content -->
+
+    <!-- Main Content -->
     <div id="main" class="site-main">
-      <!-- Page changer wrapper -->
-      <div class="pt-wrapper">
-        <!-- Subpages -->
-        <div class="subpages">
+        <!-- Page changer wrapper -->
+        <div class="pt-wrapper">
+            <!-- Subpages -->
+            <div class="subpages">
 
-            <!-- Portfolio Subpage -->
-            <section class="pt-page-current" data-id="portfolio">
-                <div class="section-inner custom-page-content">
-                    <div class="page-header color-1">
-                        <h2>Portfolio</h2>
-                    </div>
-                    <div class="page-content">
+                <!-- Portfolio Subpage -->
+                <section class="pt-page-current" data-id="portfolio">
+                    <div class="section-inner custom-page-content">
+                        <div class="page-header color-1">
+                            <h2>Portfolio</h2>
+                        </div>
+                        <div class="page-content">
 
-                        <!-- Portfolio Content -->
-                        <div class="portfolio-content">
+                            <!-- Portfolio Content -->
+                            <div class="portfolio-content">
 
-                        <!-- Portfolio filter -->
-                        <ul id="portfolio_filters" class="portfolio-filters">
-{#                            <li class="active">#}
-{#                            <a class="filter btn btn-sm btn-link active" data-group="all">All</a>#}
-{#                            </li>#}
-                            <li>
-                            <a class="filter btn btn-sm btn-link" data-group="media">Media</a>
-                            </li>
-{#                            <li>#}
-{#                            <a class="filter btn btn-sm btn-link" data-group="illustration">Illustration</a>#}
-{#                            </li>#}
-{#                            <li>#}
-{#                            <a class="filter btn btn-sm btn-link" data-group="video">Video</a>#}
-{#                            </li>#}
-                        </ul>
-                        <!-- End of Portfolio filter -->
+                                <!-- Portfolio Grid -->
+                                <div id="portfolio_grid" class="portfolio-grid portfolio-masonry masonry-grid-3">
 
-                        <!-- Portfolio Grid -->
-                        <div id="portfolio_grid" class="portfolio-grid portfolio-masonry masonry-grid-3">
-
-                            {% for portfolio in portfolios %}
-                            <!-- Portfolio Item 1 -->
-                            <figure class="item" data-groups='["all", "media"]'>
-                            <a class="ajax-page-load" href="{{ portfolio.get_absolute_url }}">
-                                <img src="{{ portfolio.image.url }}" alt="">
-                                <div>
-                                <h5 class="name">{{ portfolio.name }}</h5>
-                                <small>Media</small>
-                                <i class="fa fa-file-text-o"></i>
+                                    {% for portfolio in portfolios %}
+                                        <!-- Portfolio Item 1 -->
+                                        <figure class="item">
+                                            <a class="ajax-page-load" href="{{ portfolio.get_absolute_url }}">
+                                                <img src="{{ portfolio.image.url }}" alt="">
+                                                <div>
+                                                    <h5 class="name">{{ portfolio.name }}</h5>
+                                                    <small>more...</small>
+                                                    <i class="fa fa-file-text-o"></i>
+                                                </div>
+                                            </a>
+                                        </figure>
+                                    {% endfor %}
+                                    <!-- /Portfolio Item 1 -->
                                 </div>
-                            </a>
-                            </figure>
-                            {% endfor %}
-                            <!-- /Portfolio Item 1 -->
-                        </div>
-                        <!-- /Portfolio Grid -->
+                                <!-- /Portfolio Grid -->
 
+                            </div>
+                            <!-- /Portfolio Content -->
                         </div>
-                        <!-- /Portfolio Content -->
                     </div>
-                </div>
-            </section>
-            <!-- /Portfolio Subpage -->
+                </section>
+                <!-- /Portfolio Subpage -->
+            </div>
         </div>
-      </div>
     </div>
+
 {% endblock %}

@@ -5,50 +5,50 @@
 
 {% block content %}
 
-  <div id="main" class="site-main">
-    <!-- Page changer wrapper -->
-    <div class="pt-wrapper">
-      <!-- Subpages -->
-      <div class="subpages">
-        <!-- Blog Subpage -->
-        <section class="pt-page-current" data-id="blog">
-          <div class="section-inner custom-page-content">
-            <div class="page-header color-1">
-              <h2>Article</h2>
-            </div>
-            <div class="page-content">
+    <div id="main" class="site-main">
+        <!-- Page changer wrapper -->
+        <div class="pt-wrapper">
+            <!-- Subpages -->
+            <div class="subpages">
+                <!-- Blog Subpage -->
+                <section class="pt-page-current" data-id="blog">
+                    <div class="section-inner custom-page-content">
+                        <div class="page-header color-1">
+                            <h2>Article</h2>
+                        </div>
+                        <div class="page-content">
 
-              <!-- Blog Posts Grid -->
-              <div class="blog-masonry two-columns">
-                <!-- Blog Post 1 -->
-                {% for article in articles %}
-                  <div class="item">
-                    <div class="blog-card">
-                      <div class="media-block">
-                        <a href="{{ article.get_absolute_url }}">
-                          <img class="post-image img-responsive" src="{{ article.image.url }}" alt="" />
-                          <div class="mask"></div>
-                          <div class="post-date"><span class="day">{{ article.creat_at|date:"d" }}</span><span class="month">{{ article.creat_at|date:"N" }}</span><span class="year">{{ article.creat_at|date:"Y" }}</span></div>
-                        </a>
-                      </div>
-                      <div class="post-info">
-                        <ul class="category">
-                          <li><a href="#">{{ article.category }}</a></li>
-                        </ul>
-                        <a href="{{ article.get_absolute_url }}"><h4 class="blog-item-title">{{ article.title }}</h4></a>
-                      </div>
+                            <!-- Blog Posts Grid -->
+                            <div class="blog-masonry two-columns">
+                                <!-- Blog Post 1 -->
+                                {% for article in articles %}
+                                    <div class="item">
+                                        <div class="blog-card">
+                                            <div class="media-block">
+                                                <a href="{{ article.get_absolute_url }}">
+                                                    <img class="post-image img-responsive" src="{{ article.image.url }}" alt="" />
+                                                    <div class="mask"></div>
+                                                    <div class="post-date"><span class="day">{{ article.creat_at|date:"d" }}</span><span class="month">{{ article.creat_at|date:"N" }}</span><span class="year">{{ article.creat_at|date:"Y" }}</span></div>
+                                                </a>
+                                            </div>
+                                            <div class="post-info">
+                                                <ul class="category">
+                                                    <li><a href="#">{{ article.category }}</a></li>
+                                                </ul>
+                                                <a href="{{ article.get_absolute_url }}"><h4 class="blog-item-title">{{ article.title }}</h4></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                {% endfor %}
+                                <!-- End of Blog Post 1 -->
+                            </div>
+                            <!-- Blog Posts Grid -->
+                        </div>
                     </div>
-                  </div>
-                {% endfor %}
-                <!-- End of Blog Post 1 -->
-              </div>
-              <!-- Blog Posts Grid -->
+                </section>
+                <!-- /Blog Subpage -->
             </div>
-          </div>
-        </section>
-        <!-- /Blog Subpage -->
-      </div>
+        </div>
     </div>
-  </div>
 
 {% endblock content %}

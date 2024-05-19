@@ -24,7 +24,6 @@ urlpatterns = [
     path('', include('home.urls', namespace='home')),
     path('portfolio/', include('portfolio.urls', namespace='portfolio')),
     path('article/', include('article.urls', namespace='article')),
-    # path('aboutme/', include('about_me.urls', namespace='about_me')),
     path('contactme/', include('contact_me.urls', namespace='contact_me')),
     # ckeditor file path
     path('ckeditor/', include('ckeditor_uploader.urls')),
